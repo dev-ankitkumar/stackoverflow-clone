@@ -1,10 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import RoutePage from "./components/Route/RoutePage";
 function App() {
-  return (
-<Home />
-  );
+  return <RoutePage />;
 }
 
 export default App;

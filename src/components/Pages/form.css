@@ -1,0 +1,23 @@
+.container {
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+.sign_up_container {
+    width: 40%;
+    margin: 30px auto;
+
+}
+
+form {
+    padding: 0px 30px 20px 30px;
+}
+
+.login-page {
+    width: 40%;
+    margin: 30px auto;
+}
+
+.paper {
+    border-radius: 70px;
+}
