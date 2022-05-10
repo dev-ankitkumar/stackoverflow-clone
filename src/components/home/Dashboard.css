@@ -18,6 +18,13 @@
     padding-right: 20px;
 }
 
+.p-top-20 {
+    padding-top: 20px;
+}
+
+.p-bottom-20 {
+    padding-bottom: 20px;
+}
 
 .BtnDashboard {
     display: inline-block;
@@ -75,6 +82,16 @@ a:active {
 }
 
 .h-sideBar {
-    background-color: red !important;
+    background-color: #6098d1 !important;
+    position: relative;
     /* height: 100%; */
+    width: 250px;
+    height: 100%;
+    position: fixed !important;
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    left: 0;
+    /* z-index: 999; */
+    /* background-color: $side-menu-btn-color; */
 }

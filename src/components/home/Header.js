@@ -239,7 +239,7 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-        <SideBar />
+
       </div>
     </>
   );
