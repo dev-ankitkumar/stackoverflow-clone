@@ -1,6 +1,6 @@
 .h-50 {
-    width: 20%;
-    min-height: 150px;
+    width: 24%;
+    min-height: 300px;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -12,8 +12,8 @@
 }
 
 .m-right-10 {
-    margin-right: 10px;
-    margin-bottom: 10px;
+
+    margin-bottom: 20px;
 }
 
 .p-inside {
@@ -22,4 +22,14 @@
 
 .p-top {
     padding-top: 5px;
+}
+
+.p-left-10 {
+    padding-left: 10px;
+}
+.p-right-10 {
+    padding-left: 10px;
+}
+.width-fit {
+    width: fit-content;
 }
