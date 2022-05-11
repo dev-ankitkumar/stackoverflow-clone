@@ -1,0 +1,184 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 2,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 3,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 4,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 5,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 6,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 7,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 8,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 9,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 10,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 11,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        },
+        {
+            "id": 12,
+            "votes": 10,
+            "View": "123",
+            "question": "In React Native is there a way to recognize stylus (pen) vs touch (finger) event?",
+            "Description": "I'm working on the RN application that has one screen with a list of areas in it. So this screen should be scrollable AND drawable.What I'm trying to do - is to find a solution to distinguish touch events coming from fingers (these will be used to scroll and disallow drawing) and stylus via Apple Pencil (these will be used to draw and disallow scrolling).",
+            "tags": [
+                "ios",
+                "react-native",
+                "react-native-ios",
+                "ubuntu"
+            ],
+            "userName": "Ankit",
+            "time": "Today"
+        }
+    ]
+}
