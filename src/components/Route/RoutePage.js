@@ -14,6 +14,7 @@ import Home from "../home/Home";
 import UsersList from "../Pages/SideBar/UsersList";
 import AboutUs from "../Pages/AboutUs";
 import AskQuestion from "../Pages/Question/AskQuestion";
+import QuestionView from "../Pages/Question/QuestionView";
 export default function RoutePage() {
   return (
     <BrowserRouter>
@@ -27,8 +28,9 @@ export default function RoutePage() {
           <Route path="about" element={<About />} />
           <Route path="usecases" element={<UseCases />} />
           <Route path="user" element={<UsersList />} />
+          {/* <Route path="viewquestion" element={<QuestionView />} /> */}
           <Route path="tag" element={<Tags />} />
-          <Route path="askquestion" element={<AskQuestion />} />
+          <Route path="askquestion:id" element={<QuestionView />} />
           <Route path="About" element={<AboutUs />} />
         </Routes>
       </div>

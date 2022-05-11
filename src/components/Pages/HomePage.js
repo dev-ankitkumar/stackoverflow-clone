@@ -15,7 +15,10 @@ export default function HomePage() {
             <div className=" f-size-12 text">{x.View} Views</div>
           </div>
           <div>
-            <NavLink to="/" className="fs-4 text question-color">
+            <NavLink
+              to={`askquestion:${x.id}`}
+              className="fs-4 text question-color"
+            >
               {x.question}
             </NavLink>
             <div className="fs-6">{x.Description}</div>
