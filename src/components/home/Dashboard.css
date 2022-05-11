@@ -1,0 +1,97 @@
+.h-dashboard {
+    height: 60px;
+    background-color: #1976d2;
+    -webkit-box-shadow: 0px 2px 4px #000000;
+    -moz-box-shadow: 0px 2px 4px #000000;
+    box-shadow: 0px 2px 4px #000000;
+}
+
+.p-left-20 {
+    padding-left: 20px;
+}
+
+.p-right-20 {
+    padding-right: 20px;
+}
+
+.p-right-10 {
+    padding-right: 20px;
+}
+
+.p-top-20 {
+    padding-top: 20px;
+}
+
+.p-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.BtnDashboard {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #1976d2;
+    /* background-color: #4299e1; */
+    border-radius: 30px;
+    padding: 3px 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.logocolor {
+    color: black;
+    text-decoration: none;
+}
+
+a:link {
+    color: #FFFAFA;
+}
+
+a:visited {
+    color: #FFFAFA;
+}
+
+a:hover {
+    color: #FFFAFA;
+}
+
+a:active {
+    color: #FFFAFA;
+}
+
+.BtnDashboard1 {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    /* background-color: #4299e1; */
+    border-radius: 30px;
+    padding: 3px 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.searchText {
+    padding-left: 10px;
+    border-color: transparent;
+    border-radius: 12px;
+    height: 29px;
+}
+
+.h-sideBar {
+    background-color: #6098d1 !important;
+    position: relative;
+    /* height: 100%; */
+    width: 250px;
+    height: 100%;
+    position: fixed !important;
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    left: 0;
+    z-index: 999;
+    /* background-color: $side-menu-btn-color; */
+}
