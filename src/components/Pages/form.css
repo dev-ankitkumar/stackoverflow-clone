@@ -34,10 +34,38 @@ form {
     padding-bottom: 20px;
 }
 
-.p-top-10 {
+/* .p-top-10 {
     padding-bottom: 20px;
-}
+} */
 
 .p-left-20 {
-    padding-left: 20
+    padding-left: 20px
+}
+
+.p-right-20 {
+    padding-right: 20px
+}
+
+.p-right-10 {
+    padding-right: 10px
+}
+
+.m-right-5 {
+    margin-right: 10px
+}
+
+.f-size-12 {
+    font-size: 13px !important;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.p-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.p-top-10 {
+    padding-top: 10px;
 }

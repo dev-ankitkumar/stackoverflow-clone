@@ -13,7 +13,7 @@ import SideBar from "../home/SideBar";
 import Home from "../home/Home";
 import UsersList from "../Pages/SideBar/UsersList";
 import AboutUs from "../Pages/AboutUs";
-import AskQuestion from "../Pages/AskQuestion/AskQuestion";
+import AskQuestion from "../Pages/Question/AskQuestion";
 export default function RoutePage() {
   return (
     <BrowserRouter>

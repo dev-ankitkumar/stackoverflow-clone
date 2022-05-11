@@ -30,7 +30,7 @@ export default function SideBar() {
           <div className="d-flex flex-column p-left-30">
             <NavLink
               to="tag"
-              className="p-bottom-10 text-color"
+              className="p-bottom-10 text-color  w-50"
               style={({ isActive }) => ({
                 color: isActive ? "black" : "",
                 background: isActive ? "rgb(72 133 225)" : "",
@@ -42,7 +42,7 @@ export default function SideBar() {
             </NavLink>
             <NavLink
               to="user"
-              className="p-bottom-10 text-color"
+              className="p-bottom-10 text-color w-50"
               style={({ isActive }) => ({
                 color: isActive ? "black" : "",
                 background: isActive ? "rgb(72 133 225)" : "",
