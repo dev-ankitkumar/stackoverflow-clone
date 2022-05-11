@@ -25,7 +25,7 @@ export default function Header() {
   ));
   return (
     <>
-      <div>
+      <div className="position-fixed z-index-999 w-100">
         <div className="d-flex  h-dashboard justify-content-evenly align-items-center">
           <div className="d-flex align-items-center">
             <NavLink to="/" className="d-flex logocolor">
@@ -48,7 +48,7 @@ export default function Header() {
             </NavLink>
           </div>
         </div>
-        <SideBar />
+        {/* <SideBar /> */}
       </div>
     </>
   );
