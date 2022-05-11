@@ -14,22 +14,17 @@ import Home from "../home/Home";
 export default function RoutePage() {
   return (
     <BrowserRouter>
-      <Header />
-      <div className="row">
-        <div className="col-3">
-          <SideBar />
-        </div>
-        <div className="col-9">
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="login" element={<Login />} />
-            <Route path="product" element={<Product />} />
-            <Route path="customer" element={<Customers />} />
-            <Route path="usecases" element={<UseCases />} />
-            <Route path="tag" element={<Tags />} />
-          </Routes>
-        </div>
+      <Home />
+      <div style={{ marginLeft: "220px", paddingTop: "70px" }}>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
+          <Route path="product" element={<Product />} />
+          <Route path="customer" element={<Customers />} />
+          <Route path="usecases" element={<UseCases />} />
+          <Route path="tag" element={<Tags />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
