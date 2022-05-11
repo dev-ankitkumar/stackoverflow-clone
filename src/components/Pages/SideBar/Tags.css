@@ -27,9 +27,19 @@
 .p-left-10 {
     padding-left: 10px;
 }
+
 .p-right-10 {
     padding-left: 10px;
 }
+
 .width-fit {
     width: fit-content;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.text-color {
+    color: #D0D3D4;
 }

@@ -10,7 +10,7 @@ export default function Tags() {
           {x.tagName}
         </NavLink>
         <div className="d-flex flex-column">
-          <div className="p-top">{x.tagDescription}</div>
+          <div className="p-top text-ellipsis">{x.tagDescription}</div>
         </div>
         <div className="d-flex justify-content-between">
           <span>Question Asked by</span>

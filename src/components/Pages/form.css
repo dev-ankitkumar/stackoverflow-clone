@@ -21,3 +21,23 @@ form {
 .paper {
     border-radius: 70px;
 }
+
+.question-color {
+    color: darkblue !important;
+}
+
+.p-all {
+    padding: 5px 5px 5px 5px;
+}
+
+.p-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.p-top-10 {
+    padding-bottom: 20px;
+}
+
+.p-left-20 {
+    padding-left: 20
+}
