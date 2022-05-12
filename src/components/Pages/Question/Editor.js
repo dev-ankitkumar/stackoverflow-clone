@@ -9,17 +9,17 @@ export default function Editor() {
         data="<p>Hello from CKEditor 5!</p>"
         onReady={(editor) => {
           // You can store the "editor" and use when it is needed.
-          console.log("Editor is ready to use!", editor);
+          console.dir("Editor is ready to use!", editor);
         }}
         onChange={(event, editor) => {
           const data = editor.getData();
-          console.log({ event, editor, data });
+          console.dir({ event, editor, data });
         }}
         onBlur={(event, editor) => {
-          console.log("Blur.", editor);
+          console.dir("Blur.", editor);
         }}
         onFocus={(event, editor) => {
-          console.log("Focus.", editor);
+          console.dir("Focus.", editor);
         }}
       />
     </>

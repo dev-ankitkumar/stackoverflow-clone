@@ -1,19 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./form.css";
 import { Button, Grid, Paper, TextField } from "@mui/material";
 import { useLoginMutation } from "../redux/loginapi/loginSlice";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error1, setError1] = useState({});
+  const stateData = {
+    email: "",
+    password: "",
+  };
+  let navigate = useNavigate();
 
-  const [login, { isLoading, data, error }] = useLoginMutation();
-  // console.log(data);
+  const [loginData, setLoginData] = useState(stateData);
+  const [error1, setError1] = useState({});
+  const [submit, setSubmit] = useState(false);
+  const [login, { isLoading, data, error, isSuccess }] = useLoginMutation();
+  if (data) {
+    localStorage.setItem("login", JSON.stringify(data.access_token));
+    console.log(data.access_token, "datatat");
+  }
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setLoginData({ ...loginData, [name]: value });
+  }
+
+  function validation(val) {
+    const err = {};
+    if (!val.email) {
+      err.email = "Email feild can't be empty ";
+    }
+    if (!val.password) {
+      err.password = "Password feild  can't be empty ";
+    }
+    return err;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmit(true);
+    const email = loginData.email;
+    const password = loginData.password;
     login({ email, password });
+    setError1(validation(loginData));
+    navigate("/");
   };
+
+  useEffect(() => {}, [error1]);
+
   return (
     <>
       <div className="login-page">
@@ -23,11 +57,9 @@ export default function Login() {
               <Grid item md={12}>
                 <TextField
                   variant="outlined"
-                  value={email}
+                  value={loginData.email}
                   name="email"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
+                  onChange={handleChange}
                   label="User Name"
                   fullWidth
                 ></TextField>
@@ -38,10 +70,8 @@ export default function Login() {
                   variant="outlined"
                   label="Password"
                   name="password"
-                  value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
+                  value={loginData.password}
+                  onChange={handleChange}
                   type="password"
                   fullWidth
                 ></TextField>
@@ -53,7 +83,6 @@ export default function Login() {
                   variant="contained"
                   color="primary"
                   fullWidth
-                  disabled={isLoading}
                 >
                   Login
                 </Button>

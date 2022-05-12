@@ -5,21 +5,26 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import { useSignupMutation } from "../redux/loginapi/loginSlice";
 import "./form.css";
-
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import { useSelector } from "react-redux";
 export default function Signup() {
   const stateData = {
     name: "",
     email: "",
-    mobile: "",
+    phone_number: "",
     password: "",
-    employe_id: "",
-    gender: "",
+    emp_id: "",
+    // gender:""
   };
   const [formData, setFormData] = useState(stateData);
   const [error1, setError1] = useState({});
   const [submit, setSubmit] = useState(false);
-  const [signup, { isLoading, data, error }] = useSignupMutation();
-  // console.log(data);
+  const [signup, { isLoading, data, error, access_token }] =
+    useSignupMutation();
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -28,12 +33,12 @@ export default function Signup() {
     e.preventDefault();
     setError1(validateForm(formData));
     localStorage.setItem("formdata", JSON.stringify(formData));
-    // if (Object.keys(error1).length == 0 && submit) {
     signup(formData);
-    // }
-    // setSubmit(true);
+    if (data) {
+      console.log(data, "data");
+    }
   }
-  useEffect(() => {}, [error1]);
+
   function validateForm(val) {
     const err = {};
     if (!val.name) {
@@ -42,10 +47,10 @@ export default function Signup() {
     if (!val.email) {
       err.email = "Email feild is required ";
     }
-    if (!val.employe_id) {
+    if (!val.emp_id) {
       err.employe_id = "Employe Id  is mandatory ";
     }
-    if (!val.mobile) {
+    if (!val.phone_number) {
       err.mobile = "Mobile number feild can't be empty ";
     }
     if (!val.password) {
@@ -88,25 +93,25 @@ export default function Signup() {
                   id="Employe_id"
                   label="Employe Id"
                   variant="outlined"
-                  value={formData.employe_id}
-                  name="employe_id"
+                  value={formData.emp_id}
+                  name="emp_id"
                   type="number"
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error1.employe_id}</p>
+                <p>{error1.emp_id}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
                   id="Username"
                   label="Mobile Number"
                   variant="outlined"
-                  value={formData.mobile}
-                  name="mobile"
+                  value={formData.phone_number}
+                  name="phone_number"
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error1.mobile}</p>
+                <p>{error1.phone_number}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
@@ -121,6 +126,43 @@ export default function Signup() {
                 />
                 <p>{error1.password}</p>
               </Grid>
+              {/* <Grid item md={12}>
+                  <FormControl>
+                    <FormLabel id="demo-row-radio-buttons-group-label">
+                      Gender
+                    </FormLabel>
+                    <RadioGroup
+                      row
+                      aria-labelledby="demo-row-radio-buttons-group-label"
+                      name="row-radio-buttons-group"
+                    >
+                      <FormControlLabel
+                        value="Female"
+                        control={<Radio />}
+                        label="Female"
+                        onChange={(e) =>
+                          setFormData({ ...formData, gender: e.target.value })
+                        }
+                      />
+                      <FormControlLabel
+                        value="male"
+                        control={<Radio />}
+                        label="Male"
+                        onChange={(e) =>
+                          setFormData({ ...formData, gender: e.target.value })
+                        }
+                      />
+                      <FormControlLabel
+                        value="other"
+                        control={<Radio />}
+                        label="Other"
+                        onChange={(e) =>
+                          setFormData({ ...formData, gender: e.target.value })
+                        }
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </Grid> */}
               <Grid item md={12}>
                 <Button
                   type="submit"

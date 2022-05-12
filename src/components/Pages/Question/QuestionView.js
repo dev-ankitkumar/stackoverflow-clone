@@ -6,7 +6,7 @@ export default function QuestionView() {
   let { id } = useParams();
   // console.log(id.split(":")[1]);
   let postData = useSelector((state) => state.showpostslice.queries.showpost);
-  console.log(postData);
+  console.dir(postData);
   // let id = 1;
   // const questionData = Object.entries(data).map((x) => {
   //   return x[1]
