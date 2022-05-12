@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import "./form.css";
 import { Button, Grid, Paper, TextField } from "@mui/material";
+import { useLoginMutation } from "../redux/loginapi/loginSlice";
 
 export default function Login() {
-  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  function handleSubmit(e) {
+  const [error1, setError1] = useState({});
+
+  const [login, { isLoading, data, error }] = useLoginMutation();
+  console.log(data);
+  const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    login({ email, password });
+  };
   return (
     <>
       <div className="login-page">
@@ -17,21 +23,29 @@ export default function Login() {
               <Grid item md={12}>
                 <TextField
                   variant="outlined"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
+                  value={email}
+                  name="email"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                   label="User Name"
                   fullWidth
                 ></TextField>
+                <p>{error1.email}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
                   variant="outlined"
                   label="Password"
+                  name="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                   type="password"
                   fullWidth
                 ></TextField>
+                <p>{error1.password}</p>
               </Grid>
               <Grid item md={12}>
                 <Button
@@ -39,6 +53,7 @@ export default function Login() {
                   variant="contained"
                   color="primary"
                   fullWidth
+                  disabled={isLoading}
                 >
                   Login
                 </Button>

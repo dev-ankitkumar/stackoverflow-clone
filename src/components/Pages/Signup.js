@@ -3,56 +3,54 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
+import { useSignupMutation } from "../redux/loginapi/loginSlice";
 import "./form.css";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 
 export default function Signup() {
   const stateData = {
-    firstname: "",
-    lastname: "",
+    name: "",
     email: "",
     mobile: "",
     password: "",
-    username: "",
-
+    employe_id: "",
     gender: "",
   };
   const [formData, setFormData] = useState(stateData);
-  const [error, setError] = useState({});
+  const [error1, setError1] = useState({});
   const [submit, setSubmit] = useState(false);
-
+  const [signup, { isLoading, data, error }] = useSignupMutation();
+  console.log(data);
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   }
   function handleSubmit(e) {
     e.preventDefault();
-    setError(validateForm(formData));
+    setError1(validateForm(formData));
     localStorage.setItem("formdata", JSON.stringify(formData));
+    // if (Object.keys(error1).length == 0 && submit) {
+    signup(formData);
+    // }
+    // setSubmit(true);
   }
-
+  useEffect(() => {}, [error1]);
   function validateForm(val) {
     const err = {};
-    if (!val.firstname) {
-      err.firstname = "Please Fill this feild ";
-    }
-    if (!val.lastname) {
-      err.lastname = "Please Fill this feild ";
+    if (!val.name) {
+      err.name = "Please Fill this feild ";
     }
     if (!val.email) {
-      err.email = "Please Fill this feild ";
+      err.email = "Email feild is required ";
     }
-    if (!val.username) {
-      err.username = "Please Fill this feild ";
+    if (!val.employe_id) {
+      err.employe_id = "Employe Id  is mandatory ";
+    }
+    if (!val.mobile) {
+      err.mobile = "Mobile number feild can't be empty ";
     }
     if (!val.password) {
-      err.password = "Please Fill this feild ";
+      err.password = "Password feild is mandatory  ";
     }
-
     return err;
   }
   return (
@@ -60,30 +58,18 @@ export default function Signup() {
       <div className="sign_up_container">
         <Paper elevation={20} className="paper_style paper">
           <form onSubmit={handleSubmit} autoComplete="off">
-            <Grid container spacing={2}>
-              <Grid item md={6}>
+            <Grid container spacing={1}>
+              <Grid item md={12}>
                 <TextField
                   id="Type Name "
-                  label="First Name"
+                  label="Name"
                   variant="outlined"
-                  value={formData.firstname}
-                  name="firstname"
+                  value={formData.name}
+                  name="name"
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error.firstname}</p>
-              </Grid>
-              <Grid item md={6}>
-                <TextField
-                  id="Type Last Name"
-                  label="Last Name "
-                  variant="outlined"
-                  value={formData.lastname}
-                  name="lastname"
-                  onChange={handleChange}
-                  fullWidth
-                />
-                <p>{error.lastname}</p>
+                <p>{error1.name}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
@@ -95,19 +81,32 @@ export default function Signup() {
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error.email}</p>
+                <p>{error1.email}</p>
+              </Grid>
+              <Grid item md={12}>
+                <TextField
+                  id="Employe_id"
+                  label="Employe Id"
+                  variant="outlined"
+                  value={formData.employe_id}
+                  name="employe_id"
+                  type="number"
+                  onChange={handleChange}
+                  fullWidth
+                />
+                <p>{error1.employe_id}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
                   id="Username"
-                  label="Username"
+                  label="Mobile Number"
                   variant="outlined"
-                  value={formData.username}
-                  name="username"
+                  value={formData.mobile}
+                  name="mobile"
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error.username}</p>
+                <p>{error1.mobile}</p>
               </Grid>
               <Grid item md={12}>
                 <TextField
@@ -120,9 +119,8 @@ export default function Signup() {
                   onChange={handleChange}
                   fullWidth
                 />
-                <p>{error.password}</p>
+                <p>{error1.password}</p>
               </Grid>
-
               <Grid item md={12}>
                 <Button
                   type="submit"
