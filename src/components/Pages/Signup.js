@@ -19,7 +19,7 @@ export default function Signup() {
   const [error1, setError1] = useState({});
   const [submit, setSubmit] = useState(false);
   const [signup, { isLoading, data, error }] = useSignupMutation();
-  console.log(data);
+  // console.log(data);
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });

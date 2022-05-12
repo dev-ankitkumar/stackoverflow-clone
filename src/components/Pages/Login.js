@@ -9,7 +9,7 @@ export default function Login() {
   const [error1, setError1] = useState({});
 
   const [login, { isLoading, data, error }] = useLoginMutation();
-  console.log(data);
+  // console.log(data);
   const handleSubmit = (e) => {
     e.preventDefault();
     login({ email, password });
