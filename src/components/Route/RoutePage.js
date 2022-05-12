@@ -5,12 +5,16 @@ import Header from "../home/Header";
 import Signup from "../Pages/Signup";
 import Login from "../Pages/Login";
 import Product from "../Pages/Product";
-import Customers from "../Pages/Customers";
+import About from "../Pages/About";
 import UseCases from "../Pages/UseCases";
 import HomePage from "../Pages/HomePage";
 import Tags from "../Pages/SideBar/Tags";
 import SideBar from "../home/SideBar";
 import Home from "../home/Home";
+import UsersList from "../Pages/SideBar/UsersList";
+import AboutUs from "../Pages/AboutUs";
+import AskQuestion from "../Pages/Question/AskQuestion";
+import QuestionView from "../Pages/Question/QuestionView";
 export default function RoutePage() {
   return (
     <BrowserRouter>
@@ -21,9 +25,13 @@ export default function RoutePage() {
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route path="product" element={<Product />} />
-          <Route path="customer" element={<Customers />} />
+          <Route path="about" element={<About />} />
           <Route path="usecases" element={<UseCases />} />
+          <Route path="user" element={<UsersList />} />
+          {/* <Route path="viewquestion" element={<QuestionView />} /> */}
           <Route path="tag" element={<Tags />} />
+          <Route path="askquestion:id" element={<QuestionView />} />
+          <Route path="About" element={<AboutUs />} />
         </Routes>
       </div>
     </BrowserRouter>

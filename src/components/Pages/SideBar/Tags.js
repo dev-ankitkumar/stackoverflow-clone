@@ -5,12 +5,12 @@ import "./Tags.css";
 export default function Tags() {
   const tagsData2 = Object.entries(data1).map((x) => {
     return x[1].map((x) => (
-      <div className="card h-50 m-right-10 p-inside justify-content-around">
-        <NavLink to="/" className="navtags width-fit p-right-10">
+      <div className="card h-50 m-right-10 p-inside justify-content-around rounded shadow">
+        <NavLink to="/" className="navtags width-fit p-right-10 rounded">
           {x.tagName}
         </NavLink>
         <div className="d-flex flex-column">
-          <div className="p-top">{x.tagDescription}</div>
+          <div className="p-top text-ellipsis">{x.tagDescription}</div>
         </div>
         <div className="d-flex justify-content-between">
           <span>Question Asked by</span>

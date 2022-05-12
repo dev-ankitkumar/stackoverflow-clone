@@ -1,0 +1,42 @@
+.question-container {
+    margin-top: 40px;
+}
+
+.question-title {
+    padding: 4px 20px;
+}
+
+.question-title label:nth-child(1) {
+    display: block;
+    font-weight: bold;
+}
+
+.question-title label:nth-child(2) {
+    font-size: 14px;
+}
+
+.question-title input {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.margin {
+    margin: 15px 0px 0px 0px;
+}
+
+
+.ck-label {
+    display: none !important;
+}
+
+.ck-content {
+    height: 200px !important;
+}
+
+.question-container {
+    padding: 10px 10px;
+}
+
+.p-top-15 {
+    padding-top: 15px
+}

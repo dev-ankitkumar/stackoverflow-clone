@@ -6,7 +6,8 @@
 
 .navtags {
     color: darkslategrey !important;
-    border: 1px solid black;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
     padding-left: 5px;
     width: auto;
 }
@@ -27,9 +28,19 @@
 .p-left-10 {
     padding-left: 10px;
 }
+
 .p-right-10 {
     padding-left: 10px;
 }
+
 .width-fit {
     width: fit-content;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.text-color {
+    color: #D0D3D4;
 }
