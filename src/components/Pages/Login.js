@@ -18,7 +18,8 @@ export default function Login() {
   const [login, { isLoading, data, error, isSuccess }] = useLoginMutation();
   if (data) {
     localStorage.setItem("login", JSON.stringify(data.access_token));
-    console.log(data.access_token, "datatat");
+    navigate("/");
+    console.dir(data, "datatat");
   }
   function handleChange(e) {
     const { name, value } = e.target;
@@ -43,7 +44,6 @@ export default function Login() {
     const password = loginData.password;
     login({ email, password });
     setError1(validation(loginData));
-    navigate("/");
   };
 
   useEffect(() => {}, [error1]);

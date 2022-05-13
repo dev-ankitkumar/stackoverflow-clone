@@ -28,9 +28,10 @@ export default function RoutePage() {
           <Route path="about" element={<About />} />
           <Route path="usecases" element={<UseCases />} />
           <Route path="user" element={<UsersList />} />
-          {/* <Route path="viewquestion" element={<QuestionView />} /> */}
+
+          <Route path="askquestion" element={<AskQuestion />} />
           <Route path="tag" element={<Tags />} />
-          <Route path="askquestion/post_id:id" element={<QuestionView />} />
+          <Route path="viewquestion/post_id:id" element={<QuestionView />} />
           <Route path="About" element={<AboutUs />} />
         </Routes>
       </div>
