@@ -4,19 +4,15 @@ import { NavLink } from "react-router-dom";
 import logo from "../Images/logo.svg";
 import search from "../Assets/Images/search.svg";
 import "./Dashboard.css";
-import data from "../jsonFiles/data.json";
+import data1 from "../jsonFiles/data.json";
 import SideBar from "./SideBar";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function Header() {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("login"));
-    if (items) {
-      setItems(items);
-    }
-  }, []);
-
+  const items = JSON.parse(localStorage.getItem("login"));
+  const newData = useSelector((state) => state.login.mutations);
+  const navigate = useNavigate();
   let leftNav = ["Product", "About"];
   const navlinkLeft = leftNav.map((x) => (
     <NavLink
@@ -42,14 +38,14 @@ export default function Header() {
             <NavLink to="/" className="d-flex logocolor">
               <img src={logo} alt="" />
               <div className="text-capitalize fs-4 fw-bold align-items-center d-flex">
-                {data.AppName}
+                {data1.AppName}
               </div>
             </NavLink>
 
             <div className="d-flex p-left-20 ">{navlinkLeft}</div>
           </div>
           <input type="text" placeholder="Search..." className="searchText" />
-          {items ? (
+          {!items ? (
             <div className="d-flex">
               <NavLink
                 to="signup"
@@ -67,7 +63,16 @@ export default function Header() {
               </NavLink>
             </div>
           ) : (
-            <div>no</div>
+            <div>
+              <button
+                onClick={() => {
+                  localStorage.removeItem("login");
+                  navigate("/");
+                }}
+              >
+                Logout
+              </button>
+            </div>
           )}
         </div>
         {/* <SideBar /> */}

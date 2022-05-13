@@ -5,7 +5,7 @@ import { useTagsapiQuery } from "../../redux/loginapi/tagsSlice";
 export default function Tags() {
   const { data, error, isLoading, status, isSuccess, isError } =
     useTagsapiQuery();
-
+  console.log(data);
   return (
     <div>
       <div className="d-flex flex-column">

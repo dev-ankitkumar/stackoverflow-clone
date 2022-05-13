@@ -1,16 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const loginSlice = createApi({
-  reducerPath: "loginApi",
-
+  reducerPath: "login",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://stgphys.appsndevs.com/seasiaforms/public/api/",
   }),
 
-  endpoints: (builder) => ({
-    login: builder.mutation({
+  endpoints: (build) => ({
+    loginUser: build.mutation({
       query: (credentials) => {
-        // console.log(credentials.email, "username");
         return {
           url: "login",
           method: "POST",
@@ -18,8 +16,8 @@ export const loginSlice = createApi({
         };
       },
     }),
-    signup: builder.mutation({
-      query: (data) => {
+    signup: build.mutation({
+      query(data) {
         // console.log(data);
         return {
           url: "register",
@@ -31,4 +29,4 @@ export const loginSlice = createApi({
   }),
 });
 
-export const { useLoginMutation, useSignupMutation } = loginSlice;
+export const { useLoginUserMutation, useSignupMutation } = loginSlice;
